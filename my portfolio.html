@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+ 
+  <style>
+    /* Video background */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  oflow: hidden;
+  z-index: -1;
+}
+
+#bgVideo {
+  height: 100%;
+  width: 100%;
+  object-fit: co;
+}
+
+/* Content on top of video */
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+/* General styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section, .headerarea {
+  height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: brightness(0.9);
+}
+
+h1 {
+  text-decoration: underline;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.nav-buttons button {
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.nav-buttons button a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  border-radius: 100px;
+  margin-bottom: 2dvb;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+ol {
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+nav{
+  position: fixed;
+  top: 0px;
+  background-color: black;
+  border-style:double;
+  content: icon;
+  background-position-x: center;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Video Background -->
+<div class="video-background">
+  <video autoplay muted loop id="bgVideo">
+    <source src="bgpf.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+
+<!-- Page Content -->
+<div class="content">
+
+  <!-- Header Section -->
+  <header>
+   
+    <div class="headerarea">
+      <h1>*WELCOME TO MY PORTFOLIO*</h1>
+      <div class="nav-buttons">
+        <button><a href="#about">About</a></button>
+        <button><a href="#skills">Skills</a></button>
+        <button><a href="#Projects">Projects</a></button>
+        <button><a href="#Contact">Contact</a></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- About Section -->
+    <section id="about">
+      <h1>NARSIPURAM GOVINDARAJU</h1>
+          <img src="govind.jpg" alt="Govind Image"  height="200" width="150" />
+      <p>
+        * I am a passionate <strong><em>web developer</em></strong> exploring HTML, CSS, and JavaScript.<br>
+        * I love building responsive and user-friendly websites.<br>
+        * I study at <strong><em>GMR Institute of Technology, Rajam</em></strong>.<br>
+        <strong>⇒ My Goal:</strong> To become a <strong>full-stack developer</strong> by continuously improving my skills.
+      </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h1>Skills</h1>
+      <p><strong># The skills I have learned are listed below:</strong></p>
+      <ol>
+        <li>Basics of HTML</li>
+        <li>Basics of CSS</li>
+        <li>Basics of JavaScript</li>
+        <li>Basics of Python</li>
+        <li>Basics of C</li>
+      </ol>
+
+      <p><strong># I am also aware of Microsoft Office tools:</strong></p>
+      <ol>
+        <li>MS Word</li>
+        <li>MS Excel</li>
+        <li>MS PowerPoint</li>
+      </ol>
+
+      <p><strong># Internship Experience:</strong><br>
+        I completed an internship at HP and built basic projects such as:
+      </p>
+      <ol>
+        <li>Amazon web page clone</li>
+        <li>Google sign-in page clone</li>
+        <li>Restaurant website</li>
+        <li>Homepage of WhatsApp</li>
+      </ol>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h1>Projects</h1>
+      <p># The projects I coed during my training are:</p>
+      <ol>
+        <li><a href="#">Amazon webpage clone</a></li>
+        <li><a href="#">Sign-in page clone</a></li>
+        <li><a href="#">Restaurant website</a></li>
+        <li><a href="#">Homepage of WhatsApp</a></li>
+      </ol>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h1>Contact Me</h1>
+      <p># Feel free to contact me anytime using the form below:</p>
+      <form action="#">
+        <label for="name">Enter your name:</label><br>
+        <input type="text" id="name" name="name" /><br><br>
+
+        <label for="email">Enter your email:</label><br>
+        <input type="email" id="email" name="email" /><br><br>
+
+        <label>Choose your hobbies:</label><br>
+        <input type="checkbox" name="hobby" value="reading" /> Reading
+        <input type="checkbox" name="hobby" value="coding" /> Coding
+        <input type="checkbox" name="hobby" value="others" /> Others<br><br>
+
+        <label>Choose your gender:</label><br>
+        <input type="radio" name="gender" value="male" /> Male
+        <input type="radio" name="gender" value="female" /> Female
+        <input type="radio" name="gender" value="others" /> Others<br><br>
+
+        <label for="bio">Bio (max 100 characters):</label><br>
+        <input type="text" id="bio" name="bio" maxlength="100" /><br><br>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact us on Facebook and Instagram for any queries.</p>
+    <p>Thank you for supporting us.</p>
+  </footer>
+
+</div> <!-- end of content -->
+
+</body>
+</html>
